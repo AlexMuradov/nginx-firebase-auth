@@ -1,0 +1,39 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/alexmuradov/nginx-firebase-auth
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+secretName: "firebase-secret"
+keyJson: |
+  {
+    "type": "service_account",
+    "project_id": "**********",
+    "private_key_id": "**********",
+    "private_key": "**********",
+    "client_email": "**********",
+    "client_id": "**********",
+    "auth_uri": "**********",
+    "token_uri": "**********",
+    "auth_provider_x509_cert_url": "**********",
+    "client_x509_cert_url": "**********",
+    "universe_domain": "**********"
+  }
+
+service:
+  name: auth-service
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: example.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+firebase_creds: "/tmp/key.json"
