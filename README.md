@@ -48,10 +48,10 @@ change your `https://<your-service>.<namespace>.svc.cluster.local/auth` dependin
 
 ### Future improvements:
 
-✅ Im-memory store for caching tokens
-✅ Redis store for caching tokens (for HA deployments)
-✅ Way to store/retrieve UserID and Email after authentificated.
-✅ Sidecar implementation for those not using nginx, e.g. AWS ALB Ingress Controller, Azure Front-Door etc.
+✅ Im-memory store for caching tokens \
+✅ Redis store for caching tokens (for HA deployments) \
+✅ Way to store/retrieve UserID and Email after authentificated. \
+✅ Sidecar implementation for those not using nginx, e.g. AWS ALB Ingress Controller, Azure Front-Door etc. \
 
 ### License
 
