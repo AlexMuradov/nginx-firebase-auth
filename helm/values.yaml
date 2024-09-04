@@ -37,3 +37,4 @@ ingress:
           pathType: Prefix
 
 firebase_creds: "/tmp/key.json"
+secretMountPath: "/tmp"
