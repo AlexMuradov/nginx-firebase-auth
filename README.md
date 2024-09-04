@@ -39,7 +39,7 @@ Update your ingress controller rule with annotations below:
 metadata:
   name: application
   annotations:
-    nginx.ingress.kubernetes.io/auth-url: "http://auth-simple-auth.default.svc.cluster.local:80/auth"
+    nginx.ingress.kubernetes.io/auth-url: "http://auth-simple-auth.default.svc.cluster.local:8080/auth"
     nginx.ingress.kubernetes.io/auth-signin: "https://<your-login-url>"
 ...
 ```
@@ -51,7 +51,7 @@ change your `https://<your-service>.<namespace>.svc.cluster.local/auth` dependin
 ✅ Im-memory store for caching tokens \
 ✅ Redis store for caching tokens (for HA deployments) \
 ✅ Way to store/retrieve UserID and Email after authentificated. \
-✅ Sidecar implementation for those not using nginx, e.g. AWS ALB Ingress Controller, Azure Front-Door etc. \
+✅ Sidecar implementation for those not using nginx, e.g. AWS ALB Ingress Controller, Azure Front-Door etc.
 
 ### License
 
